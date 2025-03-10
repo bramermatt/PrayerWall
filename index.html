@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+
+        <section>
+
+            <h1>Welcome to Prayer Wall</h1>
+            <p>God is so good! Need some prayer? Have some praises to share? Welcome to Prayer Wall, your one-stop-shop for sharing prayer requests or praise notes!</p>
+        </section>
+    
+        <section id="prayerInput">
+            <h2>Got a Prayer?</h2>
+            <p>Share your prayer request below. You can also include your name, email, and church if you'd like.</p>
+            <div class="inputs">
+                <label for="prayer">Your Request</label>
+                <input type="text" id="prayer" placeholder="Enter your prayer request">
+    
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name (optional)">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email (optional)">
+                <label for="church">Church</label>
+                <input type="text" id="church" placeholder="Enter your church (optional)">
+            </div>
+            <button id="submit">Submit</button>
+        </section>
+        
+        <section id="prayerOutput">
+            <h2>Prayer Wall</h2>
+            <ul id="prayerList">
+                <!-- Prayer requests will be appended here -->
+            </ul>
+        </section>
+
+    </main>
+
+
+
+</body>
+
+<script src="updatePrayerList.js"></script>
+</html>
