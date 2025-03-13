@@ -2,35 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Share your prayer requests and praises with others.">
+    <meta name="keywords" content="prayer, prayer requests, prayer wall, prayer list, prayer chain, prayer group, prayer community, prayer support, prayer encouragement">
     <title>Prayer Wall</title>
+
+    <link rel="icon" href="img/PrayingHandsIcon.svg" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/PrayingHandsIconwhite.svg.svg" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
     <link rel="stylesheet" href="style.css">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
 
+    <nav>
+        <i class="fa-solid fa-hands-praying"></i>
+        <h1>Prayer Wall</h1>
+    </nav>
+
     <main>
-
-        <section>
-
-            <h1>Welcome to Prayer Wall</h1>
+        <!-- <section>
             <p>God is so good! Need some prayer? Have some praises to share? Welcome to Prayer Wall, your one-stop-shop for sharing prayer requests or praise notes!</p>
-        </section>
+        </section> -->
     
         <section id="prayerInput">
             <h2>Got a Prayer?</h2>
             <p>Share your prayer request below. You can also include your name, email, and church if you'd like.</p>
+            
             <div class="inputs">
-                <label for="prayer">Your Request</label>
-                <input type="text" id="prayer" placeholder="Enter your prayer request">
-    
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Enter your name (optional)">
+                
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email (optional)">
+                
                 <label for="church">Church</label>
                 <input type="text" id="church" placeholder="Enter your church (optional)">
+        
+                <!-- <label for="prayerType">Prayer Type</label>
+                <select id="prayerType">
+                    <option value="general">General</option>
+                    <option value="health">Health</option>
+                    <option value="family">Family</option>
+                    <option value="guidance">Guidance</option>
+                    <option value="thanksgiving">Thanksgiving</option>
+                    <option value="other">Other</option>
+                </select>
+        
+                <label for="anonymous">
+                    <input type="checkbox" id="anonymous"> Keep my prayer request anonymous
+                </label>
+        
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe"> Receive updates & prayer responses via email
+                </label> -->
+        
+                <label for="prayer" class="required">Your Request</label>
+                <textarea id="prayer" class="required" placeholder="Enter your prayer request" required></textarea>
             </div>
-            <button id="submit">Submit</button>
+        
+            <button id="submit"><i class="fa-solid fa-hands-praying"></i> Submit Request</button>
         </section>
         
         <section id="prayerOutput">
@@ -39,6 +72,8 @@
                 <!-- Prayer requests will be appended here -->
             </ul>
         </section>
+
+
 
     </main>
 

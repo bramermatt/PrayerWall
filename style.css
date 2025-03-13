@@ -15,15 +15,17 @@ main {
 }
 
 nav {
-    /* padding: 1em 0; */
-    /* display: flex; */
-    /* align-items: center; */
-
-    padding: 0;
+    padding: 1em;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
 
     h1, p {
         margin: 0;
+    }
 
+    i {
+        font-size: 4vh;
     }
 }
 
@@ -72,26 +74,13 @@ section {
     }
 
     input {
-        padding: .5em;
+        padding: 1em;
         border-radius: 10px;
         border: none;
         border: thin solid;
         margin-bottom: 2vh;
         margin-top: .5vh;
     }
-}
-
-
-.has-name {
-    font-weight: bold;
-}
-
-.has-email {
-    color: blue;
-}
-
-.has-church {
-    font-style: italic;
 }
 
 /* Additional styles for the prayer list */
@@ -103,6 +92,39 @@ section {
     border-radius: 10px;
 
     max-width: 500px;
+}
+
+button {
+    margin-top: 1vh;
+    padding: .5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 50%;
+}
+
+.prayer-action:disabled {
+    background-color: #28a745 !important; /* Green to indicate success */
+    color: white !important;
+    cursor: default !important;
+    pointer-events: none; /* Prevents hover and clicks */
+    border: none;
+    transition: none; /* Removes any hover animation */
+}
+
+/* Optional: If you want the icon color to stay the same */
+.prayer-action:disabled i {
+    color: white !important;
+}
+
+/* Remove hover effect when disabled */
+.prayer-action:disabled:hover {
+    background-color: #28a745 !important;
+    color: white !important;
+    cursor: default;
 }
 
 .prayer-text {
@@ -119,6 +141,23 @@ section {
     gap: 1vw;
 }
 
+.prayer-actions {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.prayedCounter {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
 .prayer-name,
 .prayer-email,
 .prayer-church,
@@ -128,4 +167,14 @@ section {
 
     text-transform: uppercase;
     font-size: small;
+}
+
+textarea#prayer {
+    width: 100%;
+    height: 100px; 
+    padding: 1em;
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    resize: vertical; 
+    margin: 1vh 0;
 }
